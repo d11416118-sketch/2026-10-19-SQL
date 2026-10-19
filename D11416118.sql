@@ -41,3 +41,15 @@ where paydate between '2009-08-01' and '2009-09-30'
 -- 資料庫 -> D11416118 -> 工作右鍵 -> 匯出資料 -> 資料來源選SQL server -> 目的地 excel  路徑:桌面/資料夾(不確定是不是自創)/檔案名稱:學號_2 -> 一直下一步
 
 -- 資料夾裡 學號_1應該是資料庫檔案(推測)
+
+
+--5. 額外 名字有大
+select * from d11416118_1
+	where name like '%大%';
+
+
+-- 每人平均收入(看王大陸)
+select name ,AVG(Income) as income
+	from d11416118_1
+	group by name ;
+
